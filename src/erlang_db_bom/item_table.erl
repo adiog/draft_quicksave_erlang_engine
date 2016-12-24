@@ -12,3 +12,12 @@
 create(Transaction, Item) ->
     io:format("~p --- ~p --- ~p~n", [Item, record_info(fields, item), record_info(size, item)]).
 
+retrieve(Transaction, ItemId) ->
+    ok.
+
+update(Transaction, ItemId, Item) ->
+    ok.
+
+delete(Transaction, ItemId) ->
+    ok.
+
