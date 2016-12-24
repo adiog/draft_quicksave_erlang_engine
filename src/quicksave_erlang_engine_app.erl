@@ -15,10 +15,12 @@
 %%====================================================================
 
 start(_StartType, _StartArgs) ->
-    quicksave_erlang_engine_sup:start_link().
+    quicksave_erlang_engine_sup:start_link(),
+    erlang_db_bom_item_table:start().
 
 %%--------------------------------------------------------------------
-stop(_State) ->
+stop(Transaction) ->
+    erlang_db_bom_item_table:close(Transaction),
     ok.
 
 %%====================================================================

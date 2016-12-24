@@ -7,5 +7,6 @@
 %% API
 -export([get_item_table/0]).
 
-get_item_table() -> item_table.
+
+get_item_table() -> ets_db_bom_item_table.
 

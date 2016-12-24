@@ -2,11 +2,16 @@
 % Copyright (c) 2016 Aleksander Gajewski <adiog@brainfuck.pl>.
 
 -module(engine_action_item).
+-author("Aleksander Gajewski <adiog@brainfuck.pl>").
+
+%% API
+-export([create/3, retrieve/3, update/3, delete/2]).
+
+
 -include("engine_authentication_user.hrl").
 -include("engine_bom_item.hrl").
 -include("engine_request_item.hrl").
 -import(dependency_factory, [get_item_table/0]).
--export([create/3, retrieve/3, update/3, delete/2]).
 
 
 create(Transaction, User, ItemCreateRequest) ->

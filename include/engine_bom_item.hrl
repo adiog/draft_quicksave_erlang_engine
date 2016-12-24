@@ -2,7 +2,7 @@
 % Copyright (c) 2016 Aleksander Gajewski <adiog@brainfuck.pl>.
 
 
--record(item, {item_id,
+-record(item, {item_id=none,
                user_id,
                item_type,
                title,
