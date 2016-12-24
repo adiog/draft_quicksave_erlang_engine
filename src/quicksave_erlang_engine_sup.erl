@@ -1,9 +1,9 @@
 %%%-------------------------------------------------------------------
-%% @doc qser top level supervisor.
+%% @doc quicksave_erlang_engine top level supervisor.
 %% @end
 %%%-------------------------------------------------------------------
 
--module(qser_sup).
+-module(quicksave_erlang_engine_sup).
 
 -behaviour(supervisor).
 

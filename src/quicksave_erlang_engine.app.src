@@ -1,8 +1,8 @@
-{application, qser,
+{application, quicksave_erlang_engine,
  [{description, "An OTP application"},
   {vsn, "0.1.0"},
   {registered, []},
-  {mod, { qser_app, []}},
+  {mod, { quicksave_erlang_engine_app, []}},
   {applications,
    [kernel,
     stdlib

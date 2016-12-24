@@ -1,9 +1,9 @@
 %%%-------------------------------------------------------------------
-%% @doc qser public API
+%% @doc quicksave_erlang_engine public API
 %% @end
 %%%-------------------------------------------------------------------
 
--module(qser_app).
+-module(quicksave_erlang_engine_app).
 
 -behaviour(application).
 
@@ -15,7 +15,7 @@
 %%====================================================================
 
 start(_StartType, _StartArgs) ->
-    qser_sup:start_link().
+    quicksave_erlang_engine_sup:start_link().
 
 %%--------------------------------------------------------------------
 stop(_State) ->
