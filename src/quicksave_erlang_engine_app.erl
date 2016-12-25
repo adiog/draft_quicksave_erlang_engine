@@ -16,6 +16,7 @@
 
 start(_StartType, _StartArgs) ->
     quicksave_erlang_engine_sup:start_link(),
+    io:format("STARTUJE ENGINE"),
     erlang_db_bom_item_table:start().
 
 %%--------------------------------------------------------------------
