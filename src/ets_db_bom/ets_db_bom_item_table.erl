@@ -13,7 +13,7 @@
 
 get_table_name() -> ets_db_bom_item_table_name.
 
-start() -> ets:new(get_table_name(), [ordered_set, named_table]).
+start() -> ets:new(get_table_name(), [ordered_set, named_table, public]).
 close(Transaction) -> ets:delete(Transaction).
 
 do_get_item_id('$end_of_table') -> 1;

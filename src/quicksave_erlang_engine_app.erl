@@ -15,13 +15,13 @@
 %%====================================================================
 
 start(_StartType, _StartArgs) ->
-    quicksave_erlang_engine_sup:start_link(),
-    io:format("STARTUJE ENGINE"),
-    erlang_db_bom_item_table:start().
+    io:format("quicksave_erlang_engine starting..."),
+    erlang_db_bom_item_table:start(),
+    quicksave_erlang_engine_sup:start_link().
 
 %%--------------------------------------------------------------------
-stop(Transaction) ->
-    erlang_db_bom_item_table:close(Transaction),
+stop(_) ->
+    erlang_db_bom_item_table:close(erlang_db_bom_item_table:get_table_name()),
     ok.
 
 %%====================================================================
