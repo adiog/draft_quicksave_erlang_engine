@@ -14,6 +14,7 @@
 -import(dependency_factory, [get_item_table/0]).
 
 
+owns(undefined, _) -> false;
 owns(User, [{_Key, Item}]) -> Item#item.user_id == User#user.user_id;
 owns(User, _) -> false.
 
